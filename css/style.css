@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600;6..12,800&display=swap');
+
+:root{
+    --background-clr:#fff;
+    --body: #FAFAFA;
+}
+
+
+body{
+    background-color:var(--body);
+    font-family: 'Nunito Sans', sans-serif;
+    color: #111517;
+    margin-top: 100px;
+}
+
+.dark{
+    color: #fff;
+    --body:#202C36;
+    --background-clr: #2B3844;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+background-color: var(--background-clr);
+box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+margin-bottom: 40px;
+}
+
+.container{
+    display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin: auto;
+	max-width: 1440px;
+	padding: 25px 80px;
+	position: relative;
+}
+
+
+h1{
+font-size: 24px;
+font-weight: 800;
+}
+
+.toggle-btn{
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Input styling */
+.search{
+    background-color:var(--background-clr);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    padding: 20px;
+    min-width: 300px;
+position: relative;
+font-size: 20px;
+outline-color: #9a9696;
+}
+
+.search::placeholder{
+    font-size: 16px;
+}
+
+.search:hover{
+    filter:brightness(115%)
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    background-color: var(--background-clr);
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 20px;
+    cursor: pointer;
+    line-height: 20px;
+    font-weight: 600;
+
+}
+
+.dropdown-filter{
+    display: flex;
+    align-items: center;
+    gap: 47px;
+    margin-bottom:4px;
+}
+
+
+.dropdown ul{
+    background-color: inherit;
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+    z-index: 99;
+}
+
+
+.dropdown ul li{
+    margin: 10px 0;
+}
+
+/* Card Styling */
+.card{
+    border-radius: 5px;
+    background-color: var(--background-clr);
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: -5px;
+    max-width: 100%;
+    width: 264px;
+}
+
+.card img{
+    object-fit: cover;
+    height: 160px;
+    width: 100%;
+}
+
+.card-body{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.card-body h3{
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.container.countries {
+	margin-top: 38px;
+    display: flex;
+    gap: 68px;
+	justify-content: center;
+}
+
+/* Modal Styling */
+.modal {
+	background-color: var(--body);
+	display: none;
+	align-items: center;
+	justify-content: space-around;
+	position: fixed;
+	top: 80px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+.modal .container {
+	background-color: var(--background-el);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+#flag  {
+	width: 559px;
+}
+
+.modal-body {
+	padding: 30px;
+    
+}
+
+.modal-body h2{
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom:23px ;
+}
+
+.modalInfo{
+    display: flex;
+    align-items: center;
+    gap: 117px;
+    margin-bottom: 50px;
+
+}
+
+.modalInfoLeft p,
+.modalInfoRight p{
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+  
+  .btn-close {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--background-clr);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.29);
+    color: inherit;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    left:100px;
+  }
+  
+  @media screen and (max-width: 430px) {
+   .container{
+    padding-inline: 45px;
+   }
+   
+    h1{
+        font-size: 14px;
+    }
+
+.toggle-btn{
+font-size: 12px;
+  }
+
+  .search{
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  section .container{
+    padding-top: 20px;
+  }
+
+  .container.countries {
+    gap: 40px;
+  }
+
+  #flag{
+    width: 319px;
+    margin-top: 240px;
+  }
+
+  .modal{
+    top:70px;
+    flex-direction: column;
+    scroll-behavior: smooth;
+  }
+
+  .btn-close{
+    top: 20px;
+    left: 25px;
+  }
+
+  .modal-body h2{
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .modalInfoLeft p,
+.modalInfoRight p{
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.modalInfo{
+    align-items: start;
+    flex-direction: column;
+    gap: 32px;
+}
+}
